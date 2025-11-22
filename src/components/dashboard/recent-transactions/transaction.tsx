@@ -60,13 +60,15 @@ export function Transaction() {
     return (
         <Card className="w-full gap-4">
             <CardHeader>
-                <CardTitle className="flex gap-2 items-center font-normal">
-                    <BadgeDollarSign />
-                    Recent Transactions
-                </CardTitle>
-                <CardAction>
-                    <Button className="text-[#525866]" variant="outline">See All</Button>
-                </CardAction>
+                <div className="flex items-center justify-between w-full">
+                    <CardTitle className="flex gap-2 items-center font-normal">
+                        <BadgeDollarSign />
+                        Recent Transactions
+                    </CardTitle>
+                    <CardAction>
+                        <Button className="text-[#525866]" variant="outline">See All</Button>
+                    </CardAction>
+                </div>
             </CardHeader>
             <CardContent>
                 <Tabs defaultValue="incoming" className="min-w-full flex flex-col gap-5">

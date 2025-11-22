@@ -21,13 +21,15 @@ export function Subscriptions() {
     return (
         <Card className="w-full gap-4">
             <CardHeader>
-                <CardTitle className="flex gap-2 items-center font-normal">
-                    <FileText />
-                    My Subscriptions
-                </CardTitle>
-                <CardAction>
-                    <Button className="text-[#525866]" variant="outline"> See All </Button>
-                </CardAction>
+                <div className="flex items-center justify-between w-full">
+                    <CardTitle className="flex gap-2 items-center font-normal">
+                        <FileText />
+                        My Subscriptions
+                    </CardTitle>
+                    <CardAction>
+                        <Button className="text-[#525866]" variant="outline"> See All </Button>
+                    </CardAction>
+                </div>
             </CardHeader>
             <CardContent>
                 <Banner />

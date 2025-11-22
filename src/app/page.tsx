@@ -56,7 +56,7 @@ export default function Page() {
             <Summary />
             <Subscriptions />
           </div>
-          <div className="flex flex-col gap-6 rounded-xl h-full">
+          <div className="flex flex-col gap-6 rounded-xl">
             <Expense />
             <Exchange />
             <CreditScore />

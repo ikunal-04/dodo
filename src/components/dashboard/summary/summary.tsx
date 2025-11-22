@@ -23,13 +23,15 @@ export function Summary() {
     return (
         <Card className="w-full gap-4">
             <CardHeader>
-                <CardTitle className="flex gap-2 items-center font-normal">
-                    <ChartPie />
-                    Spending Summary
-                </CardTitle>
-                <CardAction>
-                    <Button className="p-1 text-[#525866]" variant="outline"> Last Week <ChevronDown /> </Button>
-                </CardAction>
+                <div className="flex items-center justify-between w-full">
+                    <CardTitle className="flex gap-2 items-center font-normal">
+                        <ChartPie />
+                        Spending Summary
+                    </CardTitle>
+                    <CardAction>
+                        <Button className="p-1 text-[#525866]" variant="outline"> Last Week <ChevronDown /> </Button>
+                    </CardAction>
+                </div>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
                 <div className="relative flex flex-col items-center justify-center">

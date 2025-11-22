@@ -24,13 +24,15 @@ export function MyCards() {
     return (
         <Card className="w-full gap-4">
             <CardHeader>
-                <CardTitle className="flex gap-2 items-center font-normal">
-                    <CreditCard />
-                    My Cards
-                </CardTitle>
-                <CardAction>
-                    <Button className="text-[#525866]" variant="outline"> <Plus /> Add Card</Button>
-                </CardAction>
+                <div className="flex items-center justify-between w-full">
+                    <CardTitle className="flex gap-2 items-center font-normal">
+                        <CreditCard />
+                        My Cards
+                    </CardTitle>
+                    <Button className="text-[#525866]" variant="outline">
+                        <Plus /> Add Card
+                    </Button>
+                </div>
             </CardHeader>
             <CardContent>
                 <CreditCardd />

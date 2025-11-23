@@ -13,7 +13,7 @@ export function Expense() {
                     <ArrowDownLeft size={20} className="text-[#0E121B]" />
                 </div>
                 <div className="pt-2">
-                    <Image src="/expense/chart.svg" alt="chart" width={120} height={42} />
+                    <Image src="/expense/chart.svg" alt="chart" width={120} height={42} className="pointer-events-none"/>
                 </div>
             </div>
             <div className="flex flex-col gap-1">

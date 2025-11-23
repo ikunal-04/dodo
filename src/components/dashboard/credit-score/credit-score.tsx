@@ -38,7 +38,7 @@ export function CreditScore() {
                     </div>
                 </div>
                 <div className="w-full">
-                    <Image src="/credit-score/progress.svg" alt="credit score progress" width={320} height={22} className="w-full" />
+                    <Image src="/credit-score/progress.svg" alt="credit score progress" width={320} height={22} className="w-full pointer-events-none" />
                 </div>
             </CardContent>
         </Card>

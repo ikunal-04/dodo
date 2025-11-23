@@ -33,7 +33,7 @@ export default function Page() {
               className="md:hidden mr-2 data-[orientation=vertical]:h-4"
             />
             <Avatar className="hidden md:flex h-8 w-8 bg-[#C0D5FF] rounded-full">
-              <AvatarImage src={"/user.svg"} alt="{user.name}" />
+              <AvatarImage src={"/user.svg"} alt="user" className="pointer-events-none" />
               <AvatarFallback className="rounded-lg">CN</AvatarFallback>
             </Avatar>
             <div className="hidden md:grid flex-1 text-left text-sm leading-tight">

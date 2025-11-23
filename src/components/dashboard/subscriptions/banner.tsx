@@ -10,7 +10,7 @@ export function Banner() {
                     alt="Background"
                     width={144}
                     height={144}
-                    className="object-contain opacity-100"
+                    className="object-contain opacity-100 pointer-events-none"
                 />
             </div>
             <div className="relative z-10 flex flex-col gap-4">
@@ -20,6 +20,7 @@ export function Banner() {
                         alt="Apple Music"
                         width={32}
                         height={32}
+                        className="pointer-events-none"
                     />
                 </div>
                 <div className="flex flex-col gap-0.5">

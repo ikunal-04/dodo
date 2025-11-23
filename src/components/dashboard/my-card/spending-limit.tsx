@@ -7,7 +7,7 @@ export function SpendingLimit() {
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
                 <div className="shrink-0">
-                    <Image src={'/progress.svg'} alt={'progress'} width={48} height={48} />
+                    <Image src={'/progress.svg'} alt={'progress'} width={48} height={48} className="pointer-events-none"/>
                 </div>
                 <div className="flex flex-col gap-1 justify-items-start">
                     <div className="text-[#525866] font-normal text-[14px] leading-5 tracking-tight">

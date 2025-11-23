@@ -11,17 +11,17 @@ import { CircleCheck, ChevronLeft, ChevronRight } from "lucide-react"
 export function Card() {
     return (
         <div className="border p-5 rounded-2xl relative overflow-hidden">
-            <Image src={'/credit-card/asset-1.svg'} alt={'credit-card'} width={86} height={68} className="absolute top-0 right-0" />
-            <Image src={'/credit-card/asset-1.svg'} alt={'credit-card'} width={86} height={68} className="absolute top-9 -right-14" />
+            <Image src={'/credit-card/asset-1.svg'} alt={'credit-card'} width={86} height={68} className="absolute top-0 right-0 pointer-events-none" />
+            <Image src={'/credit-card/asset-1.svg'} alt={'credit-card'} width={86} height={68} className="absolute top-9 -right-14 pointer-events-none" />
             <div className="flex flex-col gap-14 relative z-10">
                 <div className="flex items-center justify-between">
                     <div className="flex justify-start items-center gap-4">
                         <div className="flex items-center gap-2">
                             <Avatar className="rounded-full">
-                                <AvatarImage src={"/logo.svg"} alt={"logo"} />
+                                <AvatarImage src={"/logo.svg"} alt={"logo"} className="pointer-events-none" />
                             </Avatar>
                             <Avatar className="h-4 w-5 rounded-full">
-                                <AvatarImage src={"/wifi.svg"} alt={"wifi"} />
+                                <AvatarImage src={"/wifi.svg"} alt={"wifi"} className="pointer-events-none" />
                             </Avatar>
                         </div>
                         <Badge variant={"outline"} className="rounded-md">
@@ -31,7 +31,7 @@ export function Card() {
                     </div>
                     <div>
                         <Avatar className="rounded-full">
-                            <AvatarImage src={"/mastercard.svg"} alt={"logo"} />
+                            <AvatarImage src={"/mastercard.svg"} alt={"logo"} className="pointer-events-none" />
                         </Avatar>
                     </div>
                 </div>

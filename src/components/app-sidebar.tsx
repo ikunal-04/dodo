@@ -92,7 +92,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" asChild className="border-b py-8">
               <a href="#">
                 <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={"/logo.svg"} alt={"logo"} />
+                  <AvatarImage src={"/logo.svg"} alt={"logo"} className="pointer-events-none"/>
                   <AvatarFallback className="rounded-lg">CN</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">

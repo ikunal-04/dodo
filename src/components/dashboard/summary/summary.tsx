@@ -41,21 +41,21 @@ export function Summary() {
                             alt="chart base"
                             width={252}
                             height={124}
-                            className="absolute top-0 left-0"
+                            className="absolute top-0 left-0 pointer-events-none"
                         />
                         <Image
                             src="/summary-pie/asset-1.svg"
                             alt="chart start"
                             width={128}
                             height={124}
-                            className="absolute top-0 left-0"
+                            className="absolute top-0 left-0 pointer-events-none"
                         />
                         <Image
                             src="/summary-pie/asset-2.svg"
                             alt="chart middle"
                             width={93}
                             height={57}
-                            className="absolute top-0 left-[126px]"
+                            className="absolute top-0 left-[126px] pointer-events-none"
                         />
                     </div>
                     <div className="absolute top-16 flex flex-col items-center gap-1">

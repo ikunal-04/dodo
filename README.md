@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦤 Dodo Payments Assignment
 
-## Getting Started
+A robust, pixel-perfect replication of a Figma design paired with a rate-limited API and a custom frontend queue system. This project demonstrates high-fidelity UI implementation using Next.js and Tailwind CSS, along with a resilient architecture for handling API rate limits gracefully.
 
-First, run the development server:
+## 🚀 Features
+
+- **Pixel-Perfect UI**: Meticulous implementation of the provided Figma design
+- **Rate-Limited API**: Custom backend enforcing strict request limits (10 req/min)
+- **Smart Queue System**: Frontend request management to prevent 429 errors
+- **Responsive Design**: Seamless experience across all device sizes
+- **Modern Stack**: Built with the latest Next.js 16 and Tailwind CSS 4
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 16 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS 4 |
+| **Icons** | Lucide React |
+| **UI Primitives** | Radix UI |
+| **Package Manager** | Bun |
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js**: Version 18.x or higher
+- **Bun**: Recommended package manager (install via [bun.sh](https://bun.sh))
+- **Git**: For cloning the repository
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/ikunal-04/dodo.git
+cd assignment
+```
+
+### 2. Install Dependencies
+
+```bash
+bun install
+```
+
+### 3. Start the Application
+
+```bash
+# Start the development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at:
+- **Dashboard**: `http://localhost:3000`
+- **Queue Demo**: `http://localhost:3000/queue`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Architecture & Design Decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### API Rate Limiting
+The backend implements a **Fixed Window Counter** algorithm. It tracks requests in 60-second windows. If a client exceeds 10 requests within a window, the server responds with a `429 Too Many Requests` status. This stateless approach is efficient and sufficient for the assignment's scope.
 
-## Learn More
+### Frontend Queue System (`useApiQueue`)
+To handle the strict rate limits without degrading user experience, the frontend uses a custom queue hook:
+- **Sequential Processing**: Requests are processed one at a time.
+- **Concurrency Control**: Ensures only one "in-flight" request exists.
+- **Automatic Backoff**: If a 429 is encountered, the system pauses based on the `Retry-After` header.
 
-To learn more about Next.js, take a look at the following resources:
+### Component Architecture
+The UI is built using a **Compound Component** pattern where appropriate. Reusable components (Cards, Buttons, Inputs) are separated from business logic, ensuring maintainability and scalability. Radix UI primitives are used to ensure accessibility without compromising on the custom design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── api/echo/       # Backend API endpoint with rate limiting
+│   ├── queue/          # Frontend demo page for the queue system
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Main dashboard page
+├── components/         # Reusable UI components
+│   ├── ui/             # Base UI elements (Buttons, Cards, etc.)
+│   └── dashboard/      # Dashboard-specific widgets
+├── hooks/
+│   └── useApiQueue.ts  # Custom hook implementing the request queue logic
+└── lib/                # Utility functions
+```

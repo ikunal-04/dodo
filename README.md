@@ -18,7 +18,7 @@ A robust, pixel-perfect replication of a Figma design paired with a rate-limited
 | **Language** | TypeScript |
 | **Styling** | Tailwind CSS 4 |
 | **Icons** | Lucide React |
-| **UI Primitives** | Radix UI |
+| **UI Primitives** | Shadcn UI |
 | **Package Manager** | Bun |
 
 ## 📋 Prerequisites
@@ -67,7 +67,7 @@ To handle the strict rate limits without degrading user experience, the frontend
 - **Automatic Backoff**: If a 429 is encountered, the system pauses based on the `Retry-After` header.
 
 ### Component Architecture
-The UI is built using a **Compound Component** pattern where appropriate. Reusable components (Cards, Buttons, Inputs) are separated from business logic, ensuring maintainability and scalability. Radix UI primitives are used to ensure accessibility without compromising on the custom design.
+The UI is built using a **Compound Component** pattern where appropriate. Reusable components (Cards, Buttons, Inputs) are separated from business logic, ensuring maintainability and scalability. Shadcn UI primitives are used to ensure accessibility without compromising on the custom design.
 
 ## 📁 Project Structure
 
